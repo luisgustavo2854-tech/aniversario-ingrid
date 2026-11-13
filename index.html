@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Luna</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Destello espacial -->
+    <div id="flash-overlay" class="hidden"></div>
+
+    <!-- Pantalla de Carga (Terminal) -->
+    <section id="terminal-screen">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="btn red"></span><span class="btn yellow"></span><span class="btn green"></span>
+                <p>macaco_goloso.exe</p>
+            </div>
+            <div class="terminal-body">
+                <div id="terminal-text"></div>
+                <button id="start-btn" class="hidden">Comenzar 🌙</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <section id="main-content" class="hidden">
+        
+        <!-- Constelaciones de fondo -->
+        <canvas id="constellation-canvas"></canvas>
+        
+        <!-- Luna gigante pasando por el cosmos de fondo -->
+        <img src="assets/luna_oscura.png" alt="Luna Oscura" class="giant-moon">
+
+        <!-- Fotos flotantes por los bordes -->
+        <div id="floating-photos-container"></div>
+
+        <!-- PANTALLA INICIAL (HERO) -->
+        <div class="hero-section">
+            <!-- Luna pequeña superior -->
+            <img src="assets/luna_oscura.png" alt="Mini Luna" class="small-moon">
+            
+            <h1 class="hero-title">Para Ingrid</h1>
+
+            <!-- Mensajes espaciales flotantes -->
+            <div class="floating-note note-1"><span>🚀</span> Superando la distancia Arica - Florianopolis 💙</div>
+            <div class="floating-note note-2"><span>🔭</span> Eres mi refugio en este mundo 💙</div>
+            <div class="floating-note note-3"><span>☄️</span> Feito pelo seu índio favorito 💙</div>
+            <div class="floating-note note-4"><span>🛰️</span> Especialmente para mi señora 💙</div>
+            <div class="floating-note note-5"><span>🦉</span> No vayas a perder tu racha en Duolingo 💙</div>
+            <div class="floating-note note-6"><span>📱</span> Guardando TikToks solo para meu amor 💙</div>
+
+            <div class="scroll-indicator">
+                <p>Desliza hacia abajo</p>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+
+        <!-- CARTA (Al bajar) -->
+        <div class="content-wrapper">
+            <h2 class="glow-title">Tiempo juntos</h2>
+            
+            <!-- Contador de tiempo en vivo -->
+            <div id="time-counter" class="time-counter">Calculando el tiempo a tu lado...</div>
+            
+            <div class="letter-container">
+                <p><strong>Para mi hermosa Ingrid, minha senhora, minha lua.</strong></p><br>
+                
+                <p>Sé que nuestro aniversario fue el 6 de noviembre. Los estudios en la UTA, los paros y el caos de mi propia cabeza me consumieron, pero necesitaba detener todo para hacerte esto. Línea de código por línea de código, desde cero, pensando solo en ti.</p><br>
+                
+                <p>Necesito ser sincero contigo sobre cómo me he sentido últimamente. Sé que estos días he estado más apagado, bajoneado sentimentalmente y sin muchos ánimos. A veces, ciertas actitudes tuyas que sé que son completamente justificables por todo el daño que pasamos me golpean, dejándome a muy triste. Me aterra pensar en los 4 largos años de universidad que aún me quedan, y me llena de una culpa silenciosa ver cómo tú pausas o atrasas tus propios sueños y tu postgrado por mis tiempos, lidiando con mi pobreza y mis bloqueos. Esa inseguridad me nubla.</p><br>
+
+                <p>Ha pasado más de un año desde que decidí cambiar y convertirme en la persona que tú querías que fuera. Miro hacia atrás y veo lo tonto que fui. Hoy, nuestra rutina es hermosa. Disfruto cada momento, desde compartir TikToks y mantener nuestra racha intacta en Duolingo, hasta nuestra forma única de tratarnos. Sin embargo, sé que el pasado dejó heridas profundas. Lo veo cuando jugamos Brawl Stars y perdemos; noto cómo te tensas, cómo te sientes rara cuando ya no me enojo, y cómo a veces lloras recordando lo que fue, temiendo que vuelva a reaccionar de esa manera. Me duele en el alma saber que alguna vez te hice sentir así de vulnerable.</p><br>
+                
+                <p>Pero luego te veo a ti. Te veo despertando a las 6 de la mañana, yendo a trabajar 9 horas, lidiando con tu propio cansancio brutal, con Pingo llorando cuando te vas, con el estrés de tu casa y de tu padre... y a pesar de todo ese inmenso peso, llegas y me ofreces tu calor. Me ofreces ese cariño puro. Me pides que me acurruque contigo en tu pecho. A pesar de que te he hecho dudar de ti misma en el pasado, sigues ahí, dándome una paz que nadie más me da cuando me acaricias el pelo a la distancia. Extraño tanto esos ojos verdes detrás de tus lentes y tus rizos.</p><br>
+                
+                <p>Por eso, ya no te pido perdón. En mi corazón he aceptado que el perdón total por el daño del pasado no es algo que pueda exigir hoy, ni hasta el día de mi muerte. Las cicatrices están ahí. Não busco apagar o passado, mas sim provar com atitudes diárias que o Luis de hoje está aqui para cuidar de você, não para ser seu inimigo.</p><br>
+                
+                <p>Quiero expresar mi más profunda y formal gratitud por no rendirte conmigo. Muito obrigado por me ensinar o verdadeiro significado do amor. Quiero aprender a soltar mi orgullo, dejar de ser mi propio enemigo y el tuyo, para poder ser el hombre, el indio y el ingeniero civil en informática que tú mereces. Quiero que estos 4 años pasen a tu lado, no peleando, sino construyendo el futuro que siempre hemos soñado.</p><br>
+                
+                <p>Você é tudo pra mim. Feliz aniversario, mi vida. Te amo muchísimo.</p><br>
+                
+                <p><strong>Tu indio, Luis.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Música -->
+    <audio id="bg-music" loop>
+        <source src="assets/musica.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
